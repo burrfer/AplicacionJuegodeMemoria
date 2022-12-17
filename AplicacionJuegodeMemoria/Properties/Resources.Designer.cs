@@ -83,16 +83,6 @@ namespace AplicacionJuegodeMemoria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap img10 {
-            get {
-                object obj = ResourceManager.GetObject("img10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap img11 {
             get {
                 object obj = ResourceManager.GetObject("img11", resourceCulture);
@@ -156,26 +146,6 @@ namespace AplicacionJuegodeMemoria.Properties {
         internal static System.Drawing.Bitmap img7 {
             get {
                 object obj = ResourceManager.GetObject("img7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap img8 {
-            get {
-                object obj = ResourceManager.GetObject("img8", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap img9 {
-            get {
-                object obj = ResourceManager.GetObject("img9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
