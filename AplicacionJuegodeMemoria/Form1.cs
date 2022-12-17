@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AplicacionJuegodeMemoria
 {
-    public partial class Form1 : Form
+    public partial class frm_inicio : Form
     {   
         //Configuramos la cantidad de filas y columnas del tablero
         int TamanioColumnasFilas = 4;
@@ -24,7 +24,7 @@ namespace AplicacionJuegodeMemoria
         PictureBox CartaTemporal2;
         int CartaActual = 0;
 
-        public Form1()
+        public frm_inicio()
         {
             InitializeComponent();
             iniciarJuego();
@@ -35,7 +35,7 @@ namespace AplicacionJuegodeMemoria
         public void iniciarJuego() {
             timer1.Enabled = false;
             timer1.Stop();
-            lblRecord.Text = "0";
+            lbl_Record.Text = "0";
             CantidadDeCartasVolteadas = 0;
             Movimientos = 0;
             PanelJuego.Controls.Clear();
@@ -85,8 +85,8 @@ namespace AplicacionJuegodeMemoria
             tablaPanel.Dock = DockStyle.Fill;
             PanelJuego.Controls.Add(tablaPanel);
         }
-
-        private void btnReniciar_Click(object sender, EventArgs e)
+        // Creo el evento Reiniciar_Click con el botón reiniciar para poder volver a jugar una vez terminado.
+        private void btnReiniciar_Click(object sender, EventArgs e)
         {
             iniciarJuego();
         }
@@ -95,7 +95,7 @@ namespace AplicacionJuegodeMemoria
         {
             if (CartasSeleccionadas.Count < 2){
                 Movimientos++;
-                lblRecord.Text = Convert.ToString(Movimientos); //NO OLVIDAR CONFIGURAR EL BOTÓN RECORD//
+                lbl_Record.Text = Convert.ToString(Movimientos); //NO OLVIDAR CONFIGURAR EL BOTÓN RECORD//
                 var CartasSeleccionadasUsuario = (PictureBox)sender;
 
                 CartaActual = Convert.ToInt32(CartasRevueltas[Convert.ToInt32(CartasSeleccionadasUsuario.Name) - 1]);
@@ -112,7 +112,7 @@ namespace AplicacionJuegodeMemoria
 
                     if (Carta1 != Carta2)
                     {
-                        timer1.Enabled = true;
+                        timer1.Enabled = true; //Se habilita que la carta quede a la vista un instante.
                         timer1.Start();
                     }
 
@@ -121,7 +121,7 @@ namespace AplicacionJuegodeMemoria
                         CantidadDeCartasVolteadas++;
                         if (CantidadDeCartasVolteadas > 7)
                         {
-                            MessageBox.Show("El juego terminó");
+                            MessageBox.Show("¡Felicitaciones, completaste el juego!");
                         }
                     CartaTemporal1.Enabled = false; 
                     CartaTemporal2.Enabled = false;
@@ -160,7 +160,6 @@ namespace AplicacionJuegodeMemoria
                 timer1.Stop();
             }
         }
-
     }
 
 }
